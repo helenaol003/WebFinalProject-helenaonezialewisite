@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*header*/
+header { /*line 11*/
+    width: 100%;
+    margin: auto;
+    height: 65px;
+    background-color: #ffffff;
+}
+.flex-container { /*line 12*/
+    display: flex;
+    justify-content: space-between;
+    margin: 0 87px;
+}
+.navbar { /*line 16*/
+    height: 65px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.navbarli { /*line 17, 18, 19*/
+    padding: 23px;
+    background-color: #ffffff;
+    border: none;
+}
+.navbarli a{ /*same as navbar li */
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: gray;
+    font-size: 12px;
+}
+
+/*main*/
+main {
+    width: 100%;
+    margin: auto;
+}
+
+.st-img { /*line 25*/
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} .imgst{ /*line 26*/
+    width: 100%;
+    height: auto;
+} 
+
+.st-type { /*line 31, 118*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 87px;
+    text-align: center;
+    line-height: 2.0;
+}
+.title1 { /*line 33, 43*/
+    font-size: 33px;
+    font-weight: 200;
+}
+.sc-st { /*line 33, 34, 39, 49, 63, 72, 76, 80, 84, 88, 92, 120, 121, 126, 127, 132, 133, 138, 139, 153, 161, 165, 173, 177, 185*/
+    color: rgb(30, 187, 187);
+}
+.title2 { /*line 34, 44, 121, 127, 133, 139*/
+    font-size: 19px;
+    font-weight: 200;
+}
+.sc-sw { /*line 43, 44*/
+    color: rgb(221, 160, 46);
+}
+.sc-small { /*35, 36, 37, 38, 45, 46, 47, 48, 122, 123, 128, 129, 134, 135, 140, 141, 154, 166, 178, 194, 202, 211, 219*/
+    font-size: 13px;
+    font-weight: 150;
+    line-height: 2.5;
+    color: rgb(100, 100, 100);
+} .learn { /*line 39, 49, 76, 84, 92, 161, 173, 185*/
+    font-size: 13px;
+    font-weight: 150;
+    line-height: 2.5;
+}
+.imgdown { /*line 40, 50*/
+    width: 240px; 
+    height: 70px;
+    margin: 7px 87px 20px 87px;
+}
+
+hr { /*line 60*/
+    border-bottom: 0;
+    border-top: 1px solid #eee;
+    margin: 0 87px;
+}
+
+.like { /*line 62*/
+   margin: 38px 100px; 
+}
+.typesc { /*line 63, 72, 80, 88, 120, 126, 132, 138, 153, 165, 177*/
+    font-size: 26px;
+    font-weight: 200;
+}
+.center-align { /*line 63, 64*/
+    text-align: center;
+}
+.below { /*line 64, 73, 74, 75, 76 81, 82 , 83, 84, 89 90, 91, 92*/
+    font-size: 13px;
+    font-weight: 150;
+    color: rgb(100, 100, 100);
+    line-height: 2.0;
+    margin-top: 15px;
+}
+
+.imgtype { /*line 70, 78, 86*/
+    width: 100%; 
+    height: 100%;
+}
+.sctype { /*line 69*/
+    margin: 40px 87px;
+    display: grid;
+    grid-template-columns: 400px auto;
+    align-items: center;
+}
+.grid-item { /*line 70, 71, 78, 79, 86, 87*/
+    margin: 12px;
+}
+
+.centeredimg { /*line 98, 114, 144*/
+    margin: 40px 87px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgcenter { /*line 99*/
+    width: 100%;
+    height: auto;
+}
+
+.scnews { /*line 102*/
+    margin: 10px 250px 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+.overlay { /*line 103*/
+    width: 303px;
+    height: 69px;
+    background-image: url("scfb.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+} .overlay img { /*line 104*/
+    border: 2px solid white;
+    margin-right: 4px;
+    float: left;
+} .over-text { /*line 104*/
+    padding: 8px;
+    line-height: 1.3;
+    font-size: 120%;
+    z-index: 1;
+} 
+.logo-pic { /*line 115*/
+    width: 6%;
+    height: auto;
+}
+
+.t2 { /**/
+    line-height: 1.8;
+}
+.plans a{ /*line 145*/
+    margin-bottom: 40px;
+    background-color: rgb(30, 187, 187);
+    border-radius: 30px;
+    padding: 20px 240px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.st-type2 { /*line 151*/
+    margin: 40px 87px 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 2.0;
+} .nd-ty { /*line 152, 164, 176*/
+    width: 372px;
+    height: 290px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border: 1px solid rgb(224, 216, 216);
+    border-radius: 5px;
+    background-color: rgba(224, 216, 216, 0.4);
+} .nd-ty ul { /*line 154*/
+    margin-left: 60px;
+    text-align: left;
+} 
+
+/*BIODATA*/
+.bio-st { /*line 24*/
+    margin: 65px 300px 40px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    text-align:justify;
+} .bioimg { /*line 25, 30, 31, 32*/
+    width: 100%;
+    height: auto;
+    border: 3px dashed rgb(30, 187, 187);
+    border-radius: 15px;
+} .bio1 { /*line 25, 26, 30, 31, 32*/
+    width: 300px;
+    height: auto;
+} .bio2 { /*line 35, 36, 37, 48, 51*/
+    width: 220px;
+    height: 380px;
+    margin: 10px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    position: relative;
+}.bio-txt { /*line 27*/
+    padding: 50px 0;
+    line-height: 2.0;
+} .edu { /*line 34*/
+    margin: 40px 200px;
+    display: flex;
+    justify-content: space-around;
+    border: 3px dashed rgb(30, 187, 187);
+    border-radius: 15px;
+} .bio2 h2 { /**/
+    text-align: center;
+    margin: 160px 20px;
+} .bio2 p { /**/
+    text-align: left;
+    margin: 10px;
+} .q { /*line 40*/
+    font-size: 18px;
+} .hobby { /*line 48*/
+    margin: 40px 350px;
+    display: flex;
+    justify-content: space-around;
+    border: 3px dashed rgb(30, 187, 187);
+    border-radius: 15px;
+} .hobby .bio2 .sc-small { /**/
+    text-align: center;
+    padding: 20px;
+    margin: 90px 0;
+}
+
+/*XYBERBITES*/
+.xyber { /**/
+    color: rgb(194, 28, 125);
+} .xyberimg { /*30, 31, 32*/
+    padding: 5px;
+    border: 3px dashed rgb(194, 28, 125);
+    border-radius: 15px;
+    margin: 20px;
+} .bio-xy { /*line 29*/
+    margin: 40px 87px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+/*footer*/
+footer { /*line 191*/
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    background-color: rgb(51, 49, 49);
+    border-bottom: 20px solid rgb(14, 13, 13);
+}
+
+.grid-footer { /*line 192*/
+    margin: 0 87px 0;
+    padding: 50px 0 40px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+} .ty-foot { /*line 193, 201, 210, 218*/
+    width: 250px;
+    height: 200px;
+} .ty-foot ul { /*line 193, 201, 210, 219*/
+    list-style-type: none;
+    line-height: 2.0;
+} .ty-foot .sc-small li { /*line 195, 196, 197, 198, 203, 204, 205, 206, 207, 212, 213, 214, 215, 220, 221*/
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+} .sc-small a { /*195, 196, 197, 198, 203, 204, 205, 206, 207, 212, 213, 214, 215, 220, 221*/
+    color:rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+} 
+/*unaipride line 218*/
+.unaipride .sc-small a { /*line 220, 221*/
+    color: greenyellow;
+} .unaipride .sc-small li { /*line 220, 221*/
+    border-bottom: 1px solid greenyellow;
+}  
+
+/*hover settings*/
+.navbarli a:hover { /**/
+    transition: 0.3s;
+    background-color: rgb(30, 187, 187);
+    color: white;
+} .navbarli:hover { /**/
+    transition: 0.3s;
+    background-color:rgb(30, 187, 187);
+}
+
+a.learn.sc-st:hover { /**/
+    transition: color 0.5s;
+    color:rgb(55, 124, 124);
+}
+
+.over-text a { /**/
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+    text-decoration: none;
+} .over-text a:hover { /**/
+    text-decoration: underline;
+    text-shadow: 1px 1px black;
+}
+
+.plans a:hover { /**/
+    text-decoration: underline;
+}
+
+.sc-small a:hover { /**/
+    transition: color 0.5s;
+    color: rgb(255, 255, 255);
+}
+.unaipride .sc-small a:hover { /**/
+    transition: color 0.3s;
+    color: rgb(255, 255, 255);
+} 
+
+@media (max-width: 1343px) { /**/
+    .header {
+        width: 75%;
+        font-size: 75%;
+    } 
+    .main {
+        width: 75%;
+        font-size: 75%;
+    } .main .imgtype {
+        size: 50%;
+    }
+    .footer {
+        width: 75%;
+        font-size: 75%;
+    }
+}

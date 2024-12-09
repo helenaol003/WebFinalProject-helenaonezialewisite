@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Posts</title>
+    <link rel="shortcut icon" href="faviconhol.ico" type="image/x-icon">
+</head>
+<body class="m-0 p-0 font-sans">
+    <header class="w-full m-auto h-17 bg-white">
+        <div class="my-0 mx-[87px] flex justify-between">
+            <div><a href="https://scorecloud.com/"><img src="logoSC.png"/></a>
+            </div>
+            <div>
+                <ul class="h-[65px] list-none flex">
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="index.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white">Home</a></li>
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="biodata.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white">Biodata</a></li>
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="contact_us.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white">Contact Us</a></li>
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="free_content.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white"><strong>My Content</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="my-[40px] mx-[87px]">
+        <h1 class="text-4xl font-bold text-cyan-500 mb-6 text-center">Posts</h1>
+
+        <div id="demo" class="my-[40px] mx-[87px] flex justify-center"></div>
+
+        <script>
+            const duaNimTerakhir = '3';
+            const apiUrl = `https://jsonplaceholder.typicode.com/posts/${duaNimTerakhir}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch posts');
+                    } return response.json();
+                })
+                .then(post => {
+                    const container = document.getElementById('demo');
+
+                    const postCard = `
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Post ID: ${post.id}</h2>
+                        <h3 class="text-lg text-cyan-500 font-bold mb-2">${post.title}</h3>
+                        <p class="text-gray-700">${post.body}</p>
+                    </div>
+                    `;
+
+                    container.innerHTML = postCard;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById('demo').innerHTML = `
+                    <p class="text-red-500 text-center font-bold">Failed to load posts. Please try again later.</p>
+                    `
+                });
+        </script>
+
+    </main>
+    <footer class="w-full m-auto bottom-0 bg-slate-800 border-b-[20px] border-solid border-black">
+        <div class="my-0 mx-[87px] pt-[50px] px-0 pb-[40px] grid grid-cols-4 justify-around">
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Home</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://my.scorecloud.com/plans" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Pricing/Upgrade</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/privacy-policy/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Privacy Policy</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/terms-of-use/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/support/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Support & FAQ</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/studio/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download ScoreCloud Studio</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/songwriter/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download ScoreCloud Songwriter</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/express" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download ScoreCloud Express (iPhone)</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/express-hd" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download Express HD (iPad)</a></li>
+                </ul>
+            </div>
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/about/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">About us</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/jobs/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Jobs</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/press/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Press Material</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/technology-licensing-api/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Technology Licensing & APIs</a></li>
+                </ul>
+            </div>
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-lime-300"><a href="https://fti.unai.edu/" class="text-lime-300 transition hover:duration-400 hover:text-white">FTI UNAI</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-lime-300"><a href="https://unai.edu/" class="text-lime-300 transition hover:duration-400 hover:text-white">UNAI Website</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

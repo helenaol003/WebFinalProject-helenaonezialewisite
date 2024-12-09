@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="faviconhol.ico" type="image/x-icon">
+</head>
+<body class="m-0 p-0 font-sans">
+    <header class="w-full m-auto h-17 bg-white">
+        <div class="my-0 mx-[87px] flex justify-between">
+            <div><a href="https://scorecloud.com/"><img src="logoSC.png"/></a>
+            </div>
+            <div>
+                <ul class="h-[65px] list-none flex">
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="index.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white">Home</a></li>
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="biodata.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white">Biodata</a></li>
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="posts.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white">Posts</a></li>
+                    <li class="p-[23px] bg-white border-0 transition hover:duration-200 hover:bg-cyan-500"><a href ="free_content.html" class="no-underline tracking-wide text-xs text-gray-500 transition hover:duration-200 hover:bg-cyan-500 hover:text-white"><strong>My Content</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form id="regist" action="process.php" method="post">
+            <div class="my-[40px] mx-[350px] border-2 border-solid border-black p-[20px] shadow-md">
+                <h2 class="text-cyan-500 text-3xl mx-[20px] mb-[40px] text-center">Student Registration Form</h2>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Stuart William" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm"><br><br>
+
+                <label for="sdntId">Student ID (NIM):</label>
+                <input type="text" id="sdntId" name="sdntId" placeholder="2381070" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm"><br><br>
+
+                <label for="facmaj">Faculty/Major:</label>
+                <select id="facmaj" name="facmaj" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm">
+                <option value="" disabled selected>Select your faculty</option>
+                <option value="Economy">Economy</option>
+                <option value="Nursing">Nursing</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Math Science">Math Science</option>
+                <option value="Education">Education</option>
+                <option value="Philosophy">Philosophy</option>
+                </select>
+                <br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm"><br><br>
+
+                <p>Gender</p>
+                <label for="male">Male:</label>
+                <input type="radio" id="male" name="gender" value="Male"><br>
+                <label for="female">Female:</label>
+                <input type="radio" id="female" name="gender" value="Female"><br><br>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" cols="50" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm"></textarea><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="text" id="phone" name="phone" class="w-full border-gray-300 focus:border-cyan-500 focus:ring focus:ring-cyan-800 rounded-md shadow-sm" pattern="[0-9]{10,}" title="Pelase enter a valid phone number (at least 10 digits)." required><br><br>
+
+                <button type="submit" class="w-full bg-cyan-500 text-white py-2 px-4 rounded-md transition hover:duration-400 hover:bg-cyan-700" value="submit">Submit</button><br><br>
+            </div>    
+        </form>
+
+        <script>
+            document.getElementById('regist').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const fullName = document.getElementById('fullname').value;
+                const sdntId = document.getElementById('sdntId').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+
+                //Simple validation
+                if (!fullName || !sdntId || !email || !phone) {
+                    alert('All fields are required!');
+
+                    return;
+                }
+
+                if (!/^\S+@\S+$/.test(email)) {
+                    alert('Invalid email format!');
+
+                    return;
+                }
+
+                if (!/^\d{10,}$/.test(phone)) {
+                    alert('Phone number must be at least 10 digits!');
+
+                    return;
+                }
+
+                alert('Form submitted successfully!');
+                    this.reset(); 
+            })
+        </script>
+    </main>
+
+    <footer class="w-full m-auto bottom-0 bg-slate-800 border-b-[20px] border-solid border-black">
+        <div class="my-0 mx-[87px] pt-[50px] px-0 pb-[40px] grid grid-cols-4 justify-around">
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Home</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://my.scorecloud.com/plans" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Pricing/Upgrade</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/privacy-policy/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Privacy Policy</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/terms-of-use/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/support/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Support & FAQ</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/studio/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download ScoreCloud Studio</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/songwriter/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download ScoreCloud Songwriter</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/express" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download ScoreCloud Express (iPhone)</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/express-hd" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Download Express HD (iPad)</a></li>
+                </ul>
+            </div>
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/about/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">About us</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/jobs/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Jobs</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/press/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Press Material</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-slate-500"><a href="https://scorecloud.com/technology-licensing-api/" class="text-slate-500 no-underline transition hover:duration-400 hover:text-white">Technology Licensing & APIs</a></li>
+                </ul>
+            </div>
+            <div class="w-[250px] h-[200px]">
+                <ul class="text-sm font-normal text-gray-500">
+                    <li class="py-[5px] px-0 border-b border-solid border-lime-300"><a href="https://fti.unai.edu/" class="text-lime-300 transition hover:duration-400 hover:text-white">FTI UNAI</a></li>
+                    <li class="py-[5px] px-0 border-b border-solid border-lime-300"><a href="https://unai.edu/" class="text-lime-300 transition hover:duration-400 hover:text-white">UNAI Website</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
